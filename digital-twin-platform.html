@@ -872,7 +872,8 @@
             </div>
             <div class="contact-form w-form">
               <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" data-name="Contact Form" method="get"
-                data-wf-page-id="68dd48543150e7cb15e0b94f" data-wf-element-id="eb2b5b88-2bf7-2f50-b57c-214fef4b21c5">
+                action="https://formsubmit.co/info@thegrid.es" method="POST" data-wf-page-id="68dd48543150e7cb15e0b94f"
+                data-wf-element-id="eb2b5b88-2bf7-2f50-b57c-214fef4b21c5">
                 <div class="column-x-large">
                   <div class="column-large">
                     <div class="column-tiny"><label for="name" class="form-field-label">Name</label>
@@ -999,6 +1000,151 @@
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/gsap.min.js" type="text/javascript"></script>
   <script src="https://cdn.prod.website-files.com/gsap/3.13.0/SplitText.min.js" type="text/javascript"></script>
   <script type="text/javascript">gsap.registerPlugin(SplitText);</script>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="modal-overlay" style="display: none; opacity: 0;">
+    <div class="modal-content">
+      <div class="modal-icon">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="12" fill="#02CC6D" fill-opacity="0.1" />
+          <path d="M16 8L10 14L8 12" stroke="#02CC6D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <h3 class="heading-style-h3">Message Sent!</h3>
+      <p class="text-size-medium">Thank you for getting in touch. We'll get back to you shortly.</p>
+      <button id="close-modal-btn" class="button-primary w-button" style="margin-top: 20px;">Close</button>
+    </div>
+  </div>
+
+  <style>
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal-content {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transform: scale(0.9);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      color: #000000;
+    }
+
+    .modal-overlay.active {
+      display: flex !important;
+      opacity: 1 !important;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: scale(1);
+    }
+
+    .modal-icon {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .modal-icon svg {
+      width: 64px;
+      height: 64px;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('wf-form-Contact-Form');
+      const modal = document.getElementById('success-modal');
+      const closeBtn = document.getElementById('close-modal-btn');
+
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('input[type="submit"]');
+        const originalBtnVal = submitBtn.value;
+
+        submitBtn.value = "Sending...";
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+        const object = {};
+        formData.forEach((value, key) => object[key] = value);
+
+        // Add manual config overrides if they aren't in the form
+        object['_captcha'] = "false";
+        object['_subject'] = "New Contact Form Submission";
+
+        const json = JSON.stringify(object);
+
+        fetch("https://formsubmit.co/ajax/info@thegrid.es", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success === "true" || data.ok === true || (data.message && data.message.includes('success'))) {
+              // Open Modal
+              modal.style.display = 'flex';
+              setTimeout(() => {
+                modal.classList.add('active');
+              }, 10);
+
+              form.reset();
+            } else {
+              console.error('FormSubmit Error:', data);
+              alert('Oops! Something went wrong. ' + (data.message || 'Please try again.'));
+            }
+          })
+          .catch(error => {
+            console.error('Fetch Error:', error);
+            alert('Oops! Something went wrong. Check console for details.');
+          })
+          .finally(() => {
+            submitBtn.value = originalBtnVal;
+            submitBtn.disabled = false;
+          });
+      });
+
+      // Close Modal Logic
+      function closeModal() {
+        modal.classList.remove('active');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 300);
+      }
+
+      closeBtn.addEventListener('click', closeModal);
+
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    });
+  </script>
+
 </body>
 
 </html>
