@@ -359,3 +359,8 @@
   padding-bottom: 1.5rem;
   border-bottom: 1px solid #eee;
 }
+
+.color-scheme-1 .legal-meta {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
