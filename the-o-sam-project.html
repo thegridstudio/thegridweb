@@ -27,21 +27,24 @@
     });
   </script>
   <meta charset="utf-8">
-  <title>The O-SAM Project</title>
+  <title>O-SAM | 3D Structural Model Viewer &amp; IFC&#8211;Abaqus Converter | SAP2000, ETABS, Sofistik, Dlubal | The Grid</title>
   <meta
-    content="Open Structural Analysis Models is an open-source data model designed to facilitate access, updating, and storage of structural simulations within web-based platforms."
+    content="O-SAM is a free browser-based platform: view SAP2000, ETABS, Sofistik or Dlubal models online in 3D, and convert between IFC Structural Analysis and Abaqus .INP — no desktop software needed."
     name="description">
-  <meta content="The O-SAM Project" property="og:title">
+  <meta content="O-SAM | 3D Structural Model Viewer &amp; IFC&#8211;Abaqus Converter | The Grid" property="og:title">
   <meta
-    content="Open Structural Analysis Models is an open-source data model designed to facilitate access, updating, and storage of structural simulations within web-based platforms."
+    content="O-SAM is a free browser-based platform: view SAP2000, ETABS, Sofistik or Dlubal models online in 3D, and convert between IFC Structural Analysis and Abaqus .INP — no desktop software needed."
     property="og:description">
-  <meta content="The O-SAM Project" property="twitter:title">
+  <meta content="https://thegrid.es/images/OSAMplatform.jpg" property="og:image">
+  <meta content="O-SAM | 3D Structural Model Viewer &amp; IFC&#8211;Abaqus Converter | The Grid" property="twitter:title">
   <meta
-    content="Open Structural Analysis Models is an open-source data model designed to facilitate access, updating, and storage of structural simulations within web-based platforms."
+    content="O-SAM is a free browser-based platform: view SAP2000, ETABS, Sofistik or Dlubal models online in 3D, and convert between IFC Structural Analysis and Abaqus .INP — no desktop software needed."
     property="twitter:description">
+  <meta content="https://thegrid.es/images/OSAMplatform.jpg" name="twitter:image">
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="canonical" href="https://thegrid.es/the-o-sam-project.html">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/thegridpreview.webflow.css" rel="stylesheet" type="text/css">
@@ -75,6 +78,122 @@
     document.addEventListener('DOMContentLoaded', () => {
       initBasicCustomCursor();
     });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Grid",
+    "url": "https://thegrid.es",
+    "logo": "https://thegrid.es/images/relume-134574.png",
+    "description": "Technology consultancy specialising in the digitisation of built environment assets. Experts in BIM, Structural Analysis, IoT, Digital Twins, and Knowledge Graphs.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de Jordi Girona, 31",
+      "postalCode": "08029",
+      "addressLocality": "Barcelona",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@thegrid.es",
+      "contactType": "customer support"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "O-SAM — Open Structural Analysis Models",
+    "url": "https://dashboard.thegrid.es",
+    "applicationCategory": "EngineeringApplication",
+    "operatingSystem": "Web browser",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "description": "Free browser-based platform for structural analysis. View SAP2000, ETABS, Sofistik or Dlubal models online in 3D via IFC, and convert between IFC Structural Analysis and Abaqus .INP formats using the open O-SAM JSON data model.",
+    "featureList": [
+      "Online 3D structural model viewer",
+      "IFC Structural Analysis to Abaqus INP conversion",
+      "Abaqus INP to IFC Structural Analysis conversion",
+      "Browser-based viewer for SAP2000, ETABS, Sofistik, and Dlubal models",
+      "Open JSON data model for structural analysis",
+      "No software installation required"
+    ],
+    "screenshot": "https://thegrid.es/images/OSAMplatform.jpg",
+    "provider": {
+      "@type": "Organization",
+      "name": "The Grid",
+      "url": "https://thegrid.es"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I view a SAP2000 model online without installing SAP2000?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Export your model from SAP2000 as an IFC Structural Analysis file, upload it to O-SAM, and view the full 3D structural model in your browser — members, nodes, sections, and boundary conditions — with no desktop software required on the viewing side."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does O-SAM support ETABS and Sofistik model viewing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ETABS and Sofistik both export to IFC Structural Analysis format natively. Upload that IFC file to O-SAM and view the full 3D structural model in your browser — members, nodes, boundary conditions, and load cases — with no desktop software required. You can also convert the model to Abaqus .INP from within O-SAM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I view a Dlubal RFEM or RSTAB model online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Dlubal RFEM and RSTAB export to IFC Structural Analysis format. Upload the resulting IFC file to O-SAM and inspect the model in an interactive 3D browser viewer. You can also convert it to Abaqus .INP directly from the platform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I convert an IFC Structural Analysis model to Abaqus .INP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Upload the IFC Structural Analysis file to O-SAM and download the Abaqus .INP output. This conversion — IFC to Abaqus in the browser — has no native solution in standard structural engineering workflows, and is one of O-SAM's core capabilities. The reverse path (Abaqus .INP to IFC) is equally supported."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I view an Abaqus INP file online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. O-SAM accepts Abaqus .INP files directly. Once uploaded, you can inspect the finite element model in the browser-based 3D viewer. You can also convert it to IFC Structural Analysis format, making it accessible to SAP2000, ETABS, Sofistik, or Dlubal users."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is O-SAM free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O-SAM is free to try at dashboard.thegrid.es. You can upload structural models, view them in 3D, and perform format conversions. For enterprise features, team access, or custom integration, contact The Grid."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the O-SAM data model?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O-SAM is an open-source JSON format that acts as the central interchange layer for structural analysis data. It ingests models from SAP2000, ETABS, Sofistik, and Dlubal (via IFC Structural Analysis) as well as Abaqus .INP files directly, preserving materials, finite element characteristics, and load cases independently of any proprietary software version. It is designed to power web-based structural workflows and Digital Twins."
+        }
+      }
+    ]
+  }
   </script>
 </head>
 
@@ -709,14 +828,10 @@
               <div class="padding-vertical padding-xxlarge">
                 <div class="w-layout-grid header13_content-wrapper">
                   <div class="header13_content-left">
-                    <h1 class="heading-style-h1">The O-SAM Project</h1>
+                    <h1 class="heading-style-h1">O-SAM: Browser-Based Structural Model Viewer &amp; IFC&#8211;Abaqus Converter</h1>
                   </div>
                   <div id="w-node-_2bc5794b-542e-6fa8-e64c-fcd6ba323966-0ba06fde" class="header13_content-right">
-                    <p class="text-size-medium">O-SAM (Open Structural Analysis Models) is an open-source data model
-                      designed to facilitate access, updating, and storage of structural simulations within web-based
-                      platforms. It supports informed decision-making in construction and maintenance through a Digital
-                      Twin approach, and integrates seamlessly with various commercial software to foster collaboration
-                      and extend its usability.</p>
+                    <p class="text-size-medium">O-SAM (Open Structural Analysis Models) is a free, browser-based platform for structural analysis workflows. Upload your model from <strong>SAP2000, ETABS, Sofistik or Dlubal</strong> as an IFC Structural Analysis file — or directly as an <strong>Abaqus .INP</strong> file — and view it in an interactive 3D viewer without leaving your browser. O-SAM is also the open JSON data model powering bi-directional conversion between IFC Structural Analysis and Abaqus .INP formats, integrating seamlessly into Digital Twin workflows.</p>
                     <div class="margin-top margin-medium">
                       <div class="button-group">
                         <a href="#contact" target="_blank" class="button is-secondary white w-button">Learn More</a>
@@ -749,12 +864,7 @@
                         <div class="margin-top margin-xsmall"></div>
                       </div>
                       <div class="margin-top margin-medium">
-                        <p class="text-size-medium">Our O-SAM (Open Structural Analysis Models) data model is structured
-                          in JSON format, providing the flexibility to represent and extend structural analysis
-                          information seamlessly. This ensures the persistence of key data, such as material behavior
-                          and finite element characteristics, across projects and workflows. The open nature of O-SAM
-                          also promotes model reusability, as it remains independent of proprietary software and version
-                          constraints.</p>
+                        <p class="text-size-medium">The O-SAM data model is a vendor-neutral, open JSON format that serves as the central interchange layer for structural analysis data. It accepts models from <strong>SAP2000, ETABS, Sofistik, and Dlubal</strong> (via IFC Structural Analysis) as well as <strong>Abaqus .INP</strong> files directly — preserving material behavior, finite element characteristics, and load cases independently of any proprietary software version. This makes structural data portable and reusable across your entire project lifecycle.</p>
                       </div>
                       <div class="margin-top margin-medium">
                         <div class="button-group">
@@ -763,25 +873,17 @@
                         </div>
                       </div>
                     </div>
-                    <div class="portfolio23_image-wrapper"><img loading="lazy" src="images/OSAM_json.png" alt=""
+                    <div class="portfolio23_image-wrapper"><img loading="lazy" src="images/OSAM_json.png" alt="O-SAM JSON data model structure for structural analysis"
                         class="portfolio23_image"></div>
                   </div>
                   <div class="portfolio23_item">
                     <div class="portfolio23_content-left">
                       <div class="portfolio23_title-wrapper">
-                        <h3 class="heading-style-h3 left">Open and Interoperable</h3>
+                        <h3 class="heading-style-h3 left">IFC to Abaqus Converter — and Back</h3>
                         <div class="margin-top margin-xsmall"></div>
                       </div>
                       <div class="margin-top margin-medium">
-                        <p class="text-size-medium"><span>The O-SAM structure and details are open-source, encouraging
-                            broad adoption. A set of bi-directional converters to other structural analysis data models
-                            and proprietary formats has also been developed. Currently, O-SAM supports bi-directional
-                            conversions to IFC Structural Analysis models,
-                            compatible with software such as SAP2000 and ETABS, as well as the Abaqus .INP finite
-                            element format.
-                            As this library of converters grows, O-SAM’s interoperability will expand, positioning it as
-                            a central hub for structural
-                            simulations and Digital Twins, facilitating visualization, storage and update.</span><br>
+                        <p class="text-size-medium">SAP2000, ETABS, Sofistik, and Dlubal already share models natively via the IFC Structural Analysis standard. What they don't do natively is connect to <strong>Abaqus</strong>. O-SAM bridges this gap: upload an IFC Structural Analysis model and download it as an <strong>Abaqus .INP</strong> file — or convert your Abaqus model to IFC. All in the browser, with O-SAM as the central interchange format. No installation required.
                         </p>
                       </div>
                       <div class="margin-top margin-medium">
@@ -792,22 +894,16 @@
                       </div>
                     </div>
                     <div class="portfolio23_image-wrapper"><img loading="lazy" src="images/OSAM_Interoperability.png"
-                        alt="" class="portfolio23_image"></div>
+                        alt="O-SAM bi-directional conversion between SAP2000, ETABS, Sofistik, Dlubal, and Abaqus formats" class="portfolio23_image"></div>
                   </div>
                   <div class="portfolio23_item">
                     <div class="portfolio23_content-left">
                       <div class="portfolio23_title-wrapper">
-                        <h3 class="heading-style-h3 left">Web-friendly Simulations<br></h3>
+                        <h3 class="heading-style-h3 left">3D Structural Model Viewer — Browser-Based</h3>
                         <div class="margin-top margin-xsmall"></div>
                       </div>
                       <div class="margin-top margin-medium">
-                        <p class="text-size-medium"><span>O-SAM is designed for the web. Its JSON structure allows
-                            simulations to be represented and executed directly on online platforms. Finite Element
-                            Analysis (FEA) routines can be seamlessly linked to O-SAM models, removing the need to
-                            switch between applications or depend on proprietary software. These linked O-SAM-FEA
-                            routines can also incorporate sensor data and advanced processing techniques, unlocking the
-                            full potential of real-time, web-based structural simulations for informed
-                            decision-making.</span><br></p>
+                        <p class="text-size-medium">Open any uploaded structural model — whether exported from <strong>SAP2000, ETABS, Sofistik, Dlubal</strong>, or parsed from an <strong>Abaqus .INP</strong> file — and inspect it in an interactive 3D viewer directly in your browser. No plugins, no desktop application. The O-SAM platform renders members, nodes, boundary conditions, and load cases, and connects seamlessly with Finite Element Analysis routines and IoT sensor data for real-time structural Digital Twins.</p>
                       </div>
                       <div class="margin-top margin-medium">
                         <div class="button-group">
@@ -817,7 +913,7 @@
                       </div>
                     </div>
                     <div class="portfolio23_image-wrapper"><img loading="lazy" src="images/WebStructuralAnalysis.gif"
-                        alt="" class="portfolio23_image"></div>
+                        alt="Web-based 3D structural analysis viewer running in a browser" class="portfolio23_image"></div>
                   </div>
                 </div>
               </div>
@@ -846,6 +942,57 @@
           </div>
         </div>
         <div class="cta3_background-image-wrapper"></div>
+      </section>
+      <section id="faq" class="section_portfolio23">
+        <div class="padding-global">
+          <div class="container-large">
+            <div class="padding-section-large">
+              <div class="margin-bottom margin-large">
+                <div class="text-align-center">
+                  <h2 class="heading-style-h2">FAQ</h2>
+                </div>
+              </div>
+              <div style="max-width:800px; margin:0 auto;">
+
+                <details style="margin-bottom:1.5rem; border-bottom:1px solid rgba(0,0,0,0.12); padding-bottom:1.5rem;">
+                  <summary style="cursor:pointer; font-weight:600; font-size:1.1rem; list-style:none;">Can I view a SAP2000 model online without installing SAP2000?</summary>
+                  <p class="text-size-medium" style="margin-top:0.75rem;">Yes. Export your model from SAP2000 as an IFC Structural Analysis file, upload it to <a href="https://dashboard.thegrid.es/" target="_blank" rel="noopener">O-SAM</a>, and view the full 3D structural model in your browser — members, nodes, sections, and boundary conditions — with no desktop software required on the viewing side.</p>
+                </details>
+
+                <details style="margin-bottom:1.5rem; border-bottom:1px solid rgba(0,0,0,0.12); padding-bottom:1.5rem;">
+                  <summary style="cursor:pointer; font-weight:600; font-size:1.1rem; list-style:none;">Does O-SAM support ETABS and Sofistik model viewing?</summary>
+                  <p class="text-size-medium" style="margin-top:0.75rem;">Yes. ETABS and Sofistik both export to IFC Structural Analysis format natively. Upload that IFC file to O-SAM and view the full 3D structural model in your browser — members, nodes, boundary conditions, and load cases — with no desktop software required. You can also convert the model to Abaqus .INP from within O-SAM.</p>
+                </details>
+
+                <details style="margin-bottom:1.5rem; border-bottom:1px solid rgba(0,0,0,0.12); padding-bottom:1.5rem;">
+                  <summary style="cursor:pointer; font-weight:600; font-size:1.1rem; list-style:none;">Can I view a Dlubal RFEM or RSTAB model online?</summary>
+                  <p class="text-size-medium" style="margin-top:0.75rem;">Yes. Dlubal RFEM and RSTAB export to IFC Structural Analysis format. Upload the resulting IFC file to O-SAM and inspect the model in an interactive 3D browser viewer. You can also convert it to Abaqus .INP directly from the platform.</p>
+                </details>
+
+                <details style="margin-bottom:1.5rem; border-bottom:1px solid rgba(0,0,0,0.12); padding-bottom:1.5rem;">
+                  <summary style="cursor:pointer; font-weight:600; font-size:1.1rem; list-style:none;">How do I convert an IFC Structural Analysis model to Abaqus .INP?</summary>
+                  <p class="text-size-medium" style="margin-top:0.75rem;">Upload the IFC Structural Analysis file to <a href="https://dashboard.thegrid.es/" target="_blank" rel="noopener">O-SAM</a> and download the Abaqus .INP output. This conversion — IFC to Abaqus in the browser — has no native solution in standard structural engineering workflows, and is one of O-SAM's core capabilities. The reverse path (Abaqus .INP to IFC) is equally supported.</p>
+                </details>
+
+                <details style="margin-bottom:1.5rem; border-bottom:1px solid rgba(0,0,0,0.12); padding-bottom:1.5rem;">
+                  <summary style="cursor:pointer; font-weight:600; font-size:1.1rem; list-style:none;">Can I view an Abaqus INP file online?</summary>
+                  <p class="text-size-medium" style="margin-top:0.75rem;">Yes. O-SAM accepts Abaqus .INP files directly. Once uploaded, you can inspect the finite element model in the browser-based 3D viewer. You can also convert it to IFC Structural Analysis format, making it accessible to SAP2000, ETABS, Sofistik, or Dlubal users.</p>
+                </details>
+
+                <details style="margin-bottom:1.5rem; border-bottom:1px solid rgba(0,0,0,0.12); padding-bottom:1.5rem;">
+                  <summary style="cursor:pointer; font-weight:600; font-size:1.1rem; list-style:none;">Is O-SAM free to use?</summary>
+                  <p class="text-size-medium" style="margin-top:0.75rem;">O-SAM is free to try at <a href="https://dashboard.thegrid.es/" target="_blank" rel="noopener">dashboard.thegrid.es</a>. You can upload structural models, view them in 3D, and perform format conversions. For enterprise features, team access, or custom integration, <a href="#contact">contact The Grid</a>.</p>
+                </details>
+
+                <details style="margin-bottom:1.5rem;">
+                  <summary style="cursor:pointer; font-weight:600; font-size:1.1rem; list-style:none;">What is the O-SAM data model?</summary>
+                  <p class="text-size-medium" style="margin-top:0.75rem;">O-SAM is an open-source JSON format that acts as the central interchange layer for structural analysis data. It is vendor-neutral and version-independent: it ingests models from <strong>SAP2000, ETABS, Sofistik, and Dlubal</strong> (via IFC Structural Analysis) as well as <strong>Abaqus .INP</strong> files directly, preserving materials, finite element characteristics, and load cases. It is not tied to any proprietary software and is designed to power web-based structural workflows and Digital Twins.</p>
+                </details>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="contact" class="contact-section">
         <div class="container-large">

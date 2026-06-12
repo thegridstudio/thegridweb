@@ -44,6 +44,7 @@
   <meta property="og:type" content="website">
   <meta content="summary_large_image" name="twitter:card">
   <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="canonical" href="https://thegrid.es/">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
   <link href="css/thegridpreview.webflow.css" rel="stylesheet" type="text/css">
@@ -77,6 +78,28 @@
     document.addEventListener('DOMContentLoaded', () => {
       initBasicCustomCursor();
     });
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Grid",
+    "url": "https://thegrid.es",
+    "logo": "https://thegrid.es/images/relume-134574.png",
+    "description": "Technology consultancy specialising in the digitisation of built environment assets. Experts in BIM, Structural Analysis, IoT, Digital Twins, and Knowledge Graphs.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de Jordi Girona, 31",
+      "postalCode": "08029",
+      "addressLocality": "Barcelona",
+      "addressCountry": "ES"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@thegrid.es",
+      "contactType": "customer support"
+    }
+  }
   </script>
 </head>
 
@@ -1346,15 +1369,11 @@
                   <div class="portfolio23_item">
                     <div class="portfolio23_content-left">
                       <div class="portfolio23_title-wrapper">
-                        <h3 class="heading-style-h2 heading-style-h3">The O-SAM Project</h3>
+                        <h3 class="heading-style-h2 heading-style-h3">O-SAM — Online Structural Model Viewer &amp; Converter</h3>
                         <div class="margin-top margin-xsmall"></div>
                       </div>
                       <div class="margin-top margin-medium">
-                        <p class="text-size-medium"><span>O-SAM (Open Structural Analysis Models)</span> is an
-                          open-source data model designed to facilitate access, updating, and storage of structural
-                          simulations within web-based platforms. <br><br>It supports informed decision-making in
-                          construction and maintenance through a Digital Twin approach, and integrates seamlessly with
-                          various commercial software to foster collaboration and extend its usability.<br></p>
+                        <p class="text-size-medium">O-SAM (Open Structural Analysis Models) is a free, browser-based platform for structural analysis workflows. Upload models from <strong>SAP2000, ETABS, Sofistik or Dlubal</strong> as IFC files — or directly as <strong>Abaqus .INP</strong> — and view them in 3D in your browser. O-SAM is also the open JSON data model powering bi-directional conversion between IFC Structural Analysis and Abaqus .INP formats. No installation needed.<br></p>
                       </div>
                       <div class="margin-top margin-medium">
                         <div class="button-group">
