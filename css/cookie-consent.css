@@ -1,0 +1,366 @@
+/* ==========================================================================
+   Cookie Consent Banner — thegrid.es
+   Design: matches color-scheme-1 (#00000d bg, #fff text, #03ff89 accent)
+   ========================================================================== */
+
+.tgrid-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9998;
+  background-color: #00000d;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(0.625, 0.05, 0, 1);
+  font-family: neue-haas-grotesk-display, sans-serif;
+  color: #fff;
+}
+
+.tgrid-consent-banner--visible {
+  transform: translateY(0);
+}
+
+.tgrid-consent-inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 1.5rem 2.5rem;
+}
+
+/* ---------- Layer visibility ---------- */
+
+.tgrid-consent-layer {
+  display: none;
+}
+
+.tgrid-consent-layer--active {
+  display: block;
+}
+
+/* ---------- Layer 1 — first contact ---------- */
+
+.tgrid-consent-layer-1 {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tgrid-consent-layer-1.tgrid-consent-layer--active {
+  display: flex;
+}
+
+.tgrid-consent-layer-1__text {
+  flex: 1 1 320px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tgrid-consent-layer-1__text a {
+  color: #03ff89;
+  text-decoration: underline;
+}
+
+.tgrid-consent-layer-1__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+/* ---------- Layer 2 — granular settings ---------- */
+
+.tgrid-consent-layer-2 {
+  display: none;
+}
+
+.tgrid-consent-layer-2.tgrid-consent-layer--active {
+  display: block;
+}
+
+.tgrid-consent-layer-2__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem 0;
+  color: #fff;
+}
+
+.tgrid-consent-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tgrid-consent-category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+.tgrid-consent-category__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tgrid-consent-category__name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tgrid-consent-category__desc {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+}
+
+/* ---------- Toggle switch ---------- */
+
+.tgrid-consent-toggle {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.tgrid-consent-toggle-input {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 44px;
+  height: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+  display: block;
+  margin: 0;
+}
+
+.tgrid-consent-toggle-input:checked {
+  background-color: #03ff89;
+}
+
+.tgrid-consent-toggle-input::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.tgrid-consent-toggle-input:checked::after {
+  transform: translateX(20px);
+}
+
+.tgrid-consent-toggle-input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.tgrid-consent-toggle-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Layer 2 actions ---------- */
+
+.tgrid-consent-layer-2__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* ---------- Shared button styles ---------- */
+
+.tgrid-consent-btn {
+  border-radius: 60px;
+  padding: 10px 22px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.tgrid-consent-btn--accept {
+  background-color: #03ff89;
+  color: #00000d;
+  border-color: #03ff89;
+}
+
+.tgrid-consent-btn--accept:hover {
+  background-color: #02cc6d;
+  border-color: #02cc6d;
+}
+
+/* Equal visual weight to accept — AEPD 2024 requirement */
+.tgrid-consent-btn--reject {
+  background-color: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.tgrid-consent-btn--reject:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.tgrid-consent-btn--text {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.875rem;
+  cursor: pointer;
+  text-decoration: underline;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  padding: 10px 4px;
+  white-space: nowrap;
+}
+
+.tgrid-consent-btn--text:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.tgrid-consent-btn--back {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-family: neue-haas-grotesk-display, sans-serif;
+  padding: 10px 4px;
+  text-decoration: underline;
+}
+
+.tgrid-consent-btn--back:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 767px) {
+  .tgrid-consent-inner {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .tgrid-consent-layer-1 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tgrid-consent-layer-1__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tgrid-consent-btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .tgrid-consent-layer-2__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tgrid-consent-category {
+    flex-wrap: wrap;
+  }
+}
+
+/* ---------- Legal pages ---------- */
+
+.legal-content {
+  max-width: 56rem;
+}
+
+.legal-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-content p {
+  margin-bottom: 1rem;
+  color: rgba(0, 0, 13, 0.75);
+  line-height: 1.7;
+}
+
+.legal-content ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  color: rgba(0, 0, 13, 0.75);
+  line-height: 1.7;
+}
+
+.legal-content li {
+  margin-bottom: 0.4rem;
+}
+
+.legal-content a {
+  color: #0000fe;
+  text-decoration: underline;
+}
+
+.legal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.legal-content th {
+  background-color: #f1f1f1;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  font-weight: 600;
+  border-bottom: 2px solid #ddd;
+}
+
+.legal-content td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #eee;
+  vertical-align: top;
+}
+
+.legal-content .todo-placeholder {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 0.15rem 0.35rem;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 0.875em;
+}
+
+.legal-meta {
+  font-size: 0.875rem;
+  color: rgba(0, 0, 13, 0.5);
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.color-scheme-1 .legal-meta {
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
